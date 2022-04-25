@@ -9,10 +9,11 @@ using System.Text;
 
 namespace HeyNow.Std.Dac.SqlLiteRepositry.MemoryNote
 {
-    public class MemoDac : BaseSqlLite<MemoModel>, IMemoRepository
+    public class MemoDac : BaseSqlite<MemoModel>, IMemoRepository
     {
+
         TableQuery<MemoModel> table;
-        public MemoDac(): base()
+        public MemoDac(): base("memo.db")
         {
             table = db.Table<MemoModel>();
         }

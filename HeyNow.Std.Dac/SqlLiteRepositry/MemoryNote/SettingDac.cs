@@ -7,10 +7,10 @@ using System.Text;
 
 namespace HeyNow.Std.Dac.SqlLiteRepositry.MemoryNote
 {
-    public class SettingDac : BaseSqlLite<SettingModel>, ISettingRepository
+    public class SettingDac : BaseSqlite<SettingModel>, ISettingRepository
     {
         TableQuery<SettingModel> table;
-        public SettingDac() : base()
+        public SettingDac() : base("memo.db")
         {
             table = db.Table<SettingModel>();
         }

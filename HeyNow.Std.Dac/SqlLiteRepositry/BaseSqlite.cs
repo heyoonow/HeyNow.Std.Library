@@ -8,12 +8,12 @@ using System.Text;
 
 namespace HeyNow.Std.Dac.SqlLiteRepositry
 {
-    public class BaseSqlLite<T>:IDisposable
+    public class BaseSqlite<T>:IDisposable
     {
         private string dbPath;
         protected SQLiteConnection db;
         
-        public BaseSqlLite(string dbName = "memo.db")
+        public BaseSqlite(string dbName)
         {
             string path = string.Empty;
             if (AppConfig.LocalPath.IsEmpty())
